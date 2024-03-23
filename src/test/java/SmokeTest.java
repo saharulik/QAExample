@@ -114,16 +114,14 @@ public class SmokeTest {
 
         searchByImagePage.insertImage("src/main/resources/IMG_5265.jpeg");
 
-        browser.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        browser.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
         String titleSearchPictureResult = searchByImagePage.getTextUnderTitle();
 
         Assert.assertEquals("Картина Леонардо да Винчи",titleSearchPictureResult);
 
     }
 
-
-
-
+    
     @After
     public void closeBrowser() {
        browser.quit();
